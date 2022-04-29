@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Switching Iframe display</title>
+</head>
+<body>
+    <div class="GuacDiv" style="border: 2px solid #030303; overflow: hidden; margin: 15px auto; max-width: 470px; max-height: 355px;">
+        <iframe id="GuacExtra" scrolling="no" src="INSERT YOUR URL HERE" style="border: 0px none; margin-left: 0px; height: 710px; margin-top: 0px; width: 940px;">
+        </iframe>
+        </div>
+</body>
+<script type = 'text/javascript'>
+    var guacInt = 1;
+
+    const interval = setInterval(function() {
+        guacShuffle();
+        }, 5000);
+
+    function guacShuffle() {
+        switch (guacInt) {
+            case 1:
+                document.getElementById("GuacExtra").style = "border: 0px none; margin-left: -0px; height: 710px; margin-top: -0px; width: 940px;"
+                guacInt=2;
+                break;
+            case 2:
+                document.getElementById("GuacExtra").style = "border: 0px none; margin-left: -470px; height: 710px; margin-top: 0px; width: 940px;"
+                guacInt=3;
+                break;
+            case 3:
+                document.getElementById("GuacExtra").style = "border: 0px none; margin-left: 0px; height: 710px; margin-top: -355px; width: 940px;"
+                guacInt=4;
+                break;
+            case 4:
+                document.getElementById("GuacExtra").style = "border: 0px none; margin-left: -470px; height: 710px; margin-top: -355px; width: 940px;"
+                guacInt=1;
+                break;
+        }
+        }
+
+
+</script>
+</html>
